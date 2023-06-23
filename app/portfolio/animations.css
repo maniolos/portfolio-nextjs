@@ -13,40 +13,27 @@
 .slideIn {
   opacity: 1;
   transform: translateX(0); /* End position inside the container */
+  
 }
 
-.textintoscreen {
-    color: #fff;
-    font-family: monospace;
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    position: relative;
-    animation:
-    fly 3s normal ease-in-out forwards infinite;
-  }
- /* @keyframes fly{
-    from {left: 50rem; opacity: 0%;}
-    100% {left: 0px; opacity: 100%;}
-  }   */
   .typewriter {
-    opacity: 0;
     color: #fff;
     font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
+    border-right: .15em solid white; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
     animation: 
       typing 10s infinite,
-      blink-caret .7s step-end infinite;
-      animation-delay: 2s;
+      blink-caret .9s step-end infinite;
   }
   /* The typing effect */
   @keyframes typing {
-    from { width: 46px; opacity: 1;}
-    50% { width: 325px; opacity: 1;}
-    100% { width: 46px; opacity: 1;}
-    
+    from { width: 0px}
+    50% { width: 325px}
+    100% { width: 0px}
+    /*46*/
   }
   
   /* The typewriter cursor effect */

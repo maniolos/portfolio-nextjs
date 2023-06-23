@@ -14,11 +14,11 @@ const SlidingWords = ({ words }) => {
         setTimeout(() => {
           wordElement.classList.add('slideIn');
         }, delay);
-        delay += 200; // Adjust the delay timing between words as desired
+        delay += 300; // Adjust the delay timing between words as desired
       });
     };
 
-    const animationDelay = 5000; // Delay in milliseconds before starting the animation
+    const animationDelay = 3000; // Delay in milliseconds before starting the animation
     const animationTimer = setTimeout(() => {
       animateWords();
     }, animationDelay);
@@ -41,3 +41,4 @@ const SlidingWords = ({ words }) => {
 };
 
 export default SlidingWords;
+
