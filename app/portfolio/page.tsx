@@ -3,10 +3,10 @@ import './animations.css';
 import SlidingWords from './scripts';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import React, { useState, useRef, useEffect } from 'react';
-import 'framer-motion'
+
 import './onscroll'
 import useScrollPosition from "./UseScrollHook";
-import animationOnScroll from "./UseScrollHook";
+
 
 export default function portfolio() {
   const [animationStarted, setAnimationStarted] = useState(true);
@@ -38,7 +38,6 @@ export default function portfolio() {
         </h1>
         <div>
         </div>
-        {/* {animationOnScroll(random1)}  test*/}
         <div className="h-[64rem]"></div>
         <div>
 
