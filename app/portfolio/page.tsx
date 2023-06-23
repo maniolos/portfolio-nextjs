@@ -38,7 +38,7 @@ export default function portfolio() {
         </h1>
         <div>
         </div>
-        {/* {animationOnScroll(random1)} */}
+        {/* {animationOnScroll(random1)}  test*/}
         <div className="h-[64rem]"></div>
         <div>
 
