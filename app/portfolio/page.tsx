@@ -3,8 +3,6 @@ import './animations.css';
 import SlidingWords from './scripts';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import React, { useState, useRef, useEffect } from 'react';
-
-import './onscroll'
 import useScrollPosition from "./UseScrollHook";
 
 
