@@ -6,7 +6,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import useScrollPosition from "./UseScrollHook";
 
 
-export default function portfolio() {
+export default function Portfolio() {
   const [animationStarted, setAnimationStarted] = useState(true);
   const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginable'];
   const target = useRef(null);
