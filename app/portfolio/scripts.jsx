@@ -5,7 +5,7 @@ const SlidingWords = ({ words }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    document.title = 'Kamil Pawłowski Portfolio'
+    
     const container = containerRef.current;
     const wordElements = container.getElementsByClassName('word');
 

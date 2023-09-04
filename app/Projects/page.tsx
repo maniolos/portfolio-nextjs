@@ -1,5 +1,10 @@
 'use client'
+import { useEffect } from "react";
 export default function Projects() {
+    useEffect(() => {
+        // you are safe to use the 'document' object here
+        document.title = 'Test Page';
+    }, []);
     return <>
     <header className="flex flex-wrap h-20 content-center text-3xl text-center justify-center ">Nothin here yet buddy</header>
     
