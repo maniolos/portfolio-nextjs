@@ -10,9 +10,6 @@ export default function Portfolio() {
   const [animationStarted, setAnimationStarted] = useState(true);
   const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginable'];
   const useScroll = useScrollPosition();
-  console.log(useScroll)
-
-  }, []);
   return (
     <>
       <div className="pt-[10rem]">
