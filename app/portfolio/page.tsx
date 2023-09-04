@@ -5,18 +5,14 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import React, { useState, useRef, useEffect } from 'react';
 import useScrollPosition from "./UseScrollHook";
 
+
 export default function Portfolio() {
   const [animationStarted, setAnimationStarted] = useState(true);
   const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginable'];
   const useScroll = useScrollPosition();
   console.log(useScroll)
-  // useEffect(() => {
-  //   const random = document.getElementsByClassName('AnimationOnScroll');
-  //   const random1 = random.length;
-    
-  // }, []);
 
-
+  }, []);
   return (
     <>
       <div className="pt-[10rem]">

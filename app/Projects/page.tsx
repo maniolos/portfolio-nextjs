@@ -1,3 +1,4 @@
+'use client'
 export default function Projects() {
     return <>
     <header className="flex flex-wrap h-20 content-center text-3xl text-center justify-center ">Nothin here yet buddy</header>
