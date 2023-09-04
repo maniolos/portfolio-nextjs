@@ -1,21 +1,24 @@
-'use client';
+'use client'
+
 import './animations.css';
 import SlidingWords from './scripts';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import useScrollPosition from "./UseScrollHook";
 
-
 export default function Portfolio() {
-  const [animationStarted, setAnimationStarted] = useState(true);
+  const [animationStarted, setAnimationStarted] = useState(false);
   const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginable'];
-  const useScroll = useScrollPosition();
-  useEffect(() => {  document.title = 'Kamil Pawłowski Portfolio';}, []);
   
-  if(typeof document !== 'undefined') {
-    // you are safe to use the "document" object here
-    console.log(document.location.href);
-}
+  // Use useClientEffect instead of useEffect to ensure client-side execution
+  useEffect(() => {
+    setAnimationStarted(true);
+  }, []);
+
+  useEffect(() => {
+    document.title = 'Kamil Pawłowski Portfolio';
+  }, []);
+  
   return (
     <>
       <div className="pt-[10rem]">
