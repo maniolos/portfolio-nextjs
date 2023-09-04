@@ -10,6 +10,12 @@ export default function Portfolio() {
   const [animationStarted, setAnimationStarted] = useState(true);
   const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginable'];
   const useScroll = useScrollPosition();
+  useEffect(() => {  document.title = 'Kamil Pawłowski Portfolio';}, []);
+  
+  if(typeof document !== 'undefined') {
+    // you are safe to use the "document" object here
+    console.log(document.location.href);
+}
   return (
     <>
       <div className="pt-[10rem]">
