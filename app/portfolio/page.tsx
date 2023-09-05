@@ -21,12 +21,15 @@ export default function Portfolio() {
     document.title = 'Kamil Pawłowski Portfolio';
   }, []);
 
-  const handleMouseEnter = (imageName) => {
+
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+
+  const handleMouseEnter = (imageName: string) => {
     setHoveredImage(imageName);
   };
-
+  
   const handleMouseLeave = () => {
-    setHoveredImage(null);
+    setHoveredImage(null); // Reset to null when mouse leaves
   };
 
   return (
