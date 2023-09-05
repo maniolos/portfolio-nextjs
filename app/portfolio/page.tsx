@@ -22,12 +22,11 @@ export default function Portfolio() {
   }, []);
 
 
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const handleMouseEnter = (imageName: string) => {
     setHoveredImage(imageName);
   };
-  
+
   const handleMouseLeave = () => {
     setHoveredImage(null); // Reset to null when mouse leaves
   };
