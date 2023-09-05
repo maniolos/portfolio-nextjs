@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import './animations.css';
 import SlidingWords from './scripts';
 import { useSelectedLayoutSegment } from 'next/navigation';
@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 export default function Portfolio() {
   const [animationStarted, setAnimationStarted] = useState(false);
-  const [hoveredImage, setHoveredImage] = useState(null); // Track the currently hovered image
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null); // Track the currently hovered image
   const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginable'];
 
   useEffect(() => {
@@ -20,8 +20,6 @@ export default function Portfolio() {
   useEffect(() => {
     document.title = 'Kamil Pawłowski Portfolio';
   }, []);
-
-
 
   const handleMouseEnter = (imageName: string) => {
     setHoveredImage(imageName);
