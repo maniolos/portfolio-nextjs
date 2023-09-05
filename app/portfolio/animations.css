@@ -41,3 +41,12 @@
     from, to { border-color: transparent }
     50% { border-color: white }
   }
+.opacity-css{
+  animation: opacity 0.5s linear;
+}
+
+@keyframes opacity {
+  from {opacity: 0.0;}
+  100% {opacity: 0.95;}
+  
+}
