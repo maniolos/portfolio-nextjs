@@ -2,7 +2,7 @@
 import './animations.css';
 import SlidingWords from './scripts';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 import useScrollPosition from "./UseScrollHook";
 
 import importedImages from './importer';
@@ -12,6 +12,8 @@ export default function Portfolio() {
   const [animationStarted, setAnimationStarted] = useState(false);
   const [hoveredImage, setHoveredImage] = useState<string | null>(null); // Track the currently hovered image
   const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginable'];
+
+
 
   useEffect(() => {
     setAnimationStarted(true);
@@ -29,13 +31,18 @@ export default function Portfolio() {
     setHoveredImage(null); // Reset to null when mouse leaves
   };
 
+  const [isSubmitted, setSubmitted] = useState(false)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
   return (
     <>
       <div className="pt-[18rem] md:pt-[13rem]">
         <h1 className="text-center text-2xl sm:text-3xl w-[20rem] typewriter">Hi my name is..</h1>
         <h1 className="flex justify-center pt-5 font-bold md:text-7xl sm:text-5xl text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Kamil Pawłowski</h1>
         <h1 className="pt-5 justify-center font-mono text-2xl sm:3xl flex-nowrap flex">
-          I&apos;m a <span className="justify-center font-mono text-2xl  sm:3xl flex-nowrap flex px-2 bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:89%_3px] bg-no-repeat bg-bottom">Front-End</span> developer
+          I&apos;m a <span className="justify-center font-mono text-2xl  sm:3xl flex-nowrap flex px-2 bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:89%_2px] sm:bg-[length:89%_3px] bg-no-repeat bg-bottom">Front-End</span> developer
         </h1>
       </div>
       <div className="pt-[2rem]">
@@ -77,9 +84,21 @@ export default function Portfolio() {
           </div>
         ))}
       </div>
-      <div className="h-[64rem]"/>
+
+      <div className='h-[20rem] bg-grey'/>
+
+
+      <div className="h-[30rem] items-center justify-center font-mono text-center text-1xl sm:text-2xl bg-stone-850 ">
+        <div className='h-[1rem] bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:90%_2px] sm:bg-[length:70%_3px] bg-no-repeat bg-bottom'/>
+              <h1 className='p-2 sm:p-7'>If you'd like to get in touch with me, please don't hesitate to reach out via email at </h1>
+              <span className="pt-7 pb-2 justify-center font-mono text-2xl sm:text-3xl flex-nowrap flex px-2 bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:77%_2px] sm:bg-[length:24%_3px] bg-no-repeat bg-bottom">Pawlowskidev@gmail.com</span>
+              
+
+      </div>
 
       
+    
+    
       
       
       <div className="flex flex-wrap h-100 justify-center">
