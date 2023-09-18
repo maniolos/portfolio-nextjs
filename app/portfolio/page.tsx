@@ -90,7 +90,7 @@ export default function Portfolio() {
 
       <div className="h-[30rem] items-center justify-center font-mono text-center text-1xl sm:text-2xl bg-stone-850 ">
         <div className='h-[1rem] bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:90%_2px] sm:bg-[length:70%_3px] bg-no-repeat bg-bottom'/>
-              <h1 className='p-2 sm:p-7'>If you'd like to get in touch with me, please don't hesitate to reach out via email at </h1>
+          <h1 className='p-2 sm:p-7'>If you&apos;d like to get in touch with me, please don&apos;t hesitate to reach out via email at </h1>
               <span className="pt-7 pb-2 justify-center font-mono text-2xl sm:text-3xl flex-nowrap flex px-2 bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:77%_2px] sm:bg-[length:24%_3px] bg-no-repeat bg-bottom">Pawlowskidev@gmail.com</span>
               
 
