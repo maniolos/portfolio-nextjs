@@ -35,36 +35,6 @@ function YourComponent() {
     const handleMouseLeave = () => {
       setHoveredImage(null);
     };
-  
-    return (
-        <div className="flex flex-wrap justify-center">
-          {importedImages.map((image) => (
-            <div
-              key={image.name}
-              className={`w-2/5 p-1 m-3 sm:w-32 md:w-64 bg-gradient-to-r from-pink-500 to-violet-500 ${
-                hoveredImage === image.name ? 'hovered' : ''
-              }`}
-            >
-              <div className="h-full w-full bg-stone-950 p-2">
-                <Image
-                  className="border-1"
-                  src={image.href}
-                  width={250}
-                  height={250}
-                  alt={image.name}
-                  onMouseEnter={() => handleMouseEnter(image.name)}
-                  onMouseLeave={handleMouseLeave}
-                />
-                {hoveredImage === image.name && (
-                  <div className="hovered-content">
-                    <p>{image.name}</p>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      );
     }
 export default importedImages;
 
