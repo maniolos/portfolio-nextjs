@@ -51,7 +51,7 @@ export default function Portfolio() {
       </div>
 
       {/* About Me */}
-      <div className="mt-[19rem] sm:mt-[35rem] p-4 h-[30rem] sm:h-[40rem] font-mono text-2xl justify-center text-center">
+      <div className="mt-[19rem] sm:mt-[35rem] p-4 h-[33rem] sm:h-[40rem] font-mono text-2xl justify-center text-center">
         <span className="pb-2 justify-center font-mono text-2xl sm:text-3xl flex-nowrap flex px-2 bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:30%_2px] sm:bg-[length:19%_3px] md:bg-[length:15%_3px] lg:bg-[length:12%_3px] bg-no-repeat bg-bottom">About me</span>
         <div className='sm:flex-nowrap sm:flex'>
           <h1 className='pt-10 sm:pl-[1rem] md:pl-[5rem] lg:pl-[20%] pl-1 sm:pr-[3rem] sm:w-[72rem] pd-[3rem] sm:leading-10  text-center sm:text-left text-lg sm:text-2xl antialiased tracking-wide not-italic  '>I&apos;m Kamil Pawłowski, a junior <span className='underline'>Front-end</span> developer with a flair for creative coding. My journey into web development began with a fascination for turning ideas into reality through code. Proficient in design and UI optimization, I&apos;m committed to becoming a Full-Stack Engineer, blending design with functionality. Join me in shaping the dynamic web landscape.</h1>
