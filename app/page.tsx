@@ -12,7 +12,6 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 import PortfolioPic from "./img/maniek3.jpg";
 import './animations.css';
-import { useSelectedLayoutSegment } from 'next/navigation';
 
 
 config.autoAddCss = false;
@@ -25,6 +24,7 @@ export default function Portfolio() {
   const [animationStarted, setAnimationStarted] = useState(false);
 
   useEffect(() => {
+    setAnimationStarted(true);
     document.title = 'Kamil Pawłowski Portfolio';
   }, []);
 
@@ -43,8 +43,8 @@ export default function Portfolio() {
 
       {/* Animation */}
       <div className="pt-[2rem]">
-        <h1 className="text-center AnimationOnScroll">
-          <div className="text-center text-xl md:text-2xl AnimationOnScroll">
+        <h1 className="text-center ">
+          <div className="text-center text-xl md:text-2xl">
             {animationStarted && <SlidingWords words={words} />}
           </div>
         </h1>
