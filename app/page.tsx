@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { faHtml5, faSquareJs, faPhp, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { Analytics } from '@vercel/analytics/react';
+
 import PortfolioPic from "./img/maniek3.jpg";
 import './animations.css';
 
@@ -40,7 +40,6 @@ export default function Portfolio() {
           I&apos;m a <span className="justify-center font-mono text-2xl  sm:3xl flex-nowrap flex px-2 bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:89%_2px] sm:bg-[length:89%_3px] bg-no-repeat bg-bottom">Front-End</span> developer
         </h1>
       </div>
-      <Analytics />
       {/* Animation */}
       <div className="pt-[2rem]">
         <h1 className="text-center ">
