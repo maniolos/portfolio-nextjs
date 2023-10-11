@@ -32,7 +32,7 @@ export default function Portfolio() {
 
   return (
     <>
-      {/* Introductory Content test*/}
+      {/* Introductory Content*/}
       <div className="pt-[18rem] md:pt-[13rem]">
         <h1 className="text-center text-2xl sm:text-3xl w-[20rem] typewriter">Hi my name is..</h1>
         <h1 className="flex justify-center pt-5 font-bold md:text-7xl sm:text-5xl text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Kamil Pawłowski</h1>
