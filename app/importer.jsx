@@ -1,13 +1,11 @@
-// importer.tsx
-// import Image1 from './img/next.png';
-import React, { useState } from 'react';
+import React from 'react';
 import Image1 from './img/nextjs2.svg';
 import Image2 from './img/react2.svg';
 import Image3 from './img/tailwind2.svg';
 import Image4 from './img/typescript.svg';
 import Image from 'next/image';
-const importedImages = [
 
+const importedImages = [
   {
     name: 'NextJs',
     href: Image1,
@@ -21,24 +19,29 @@ const importedImages = [
     href: Image3,
   },
   {
-    name: 'Typescirpt',
+    name: 'Typescript',
     href: Image4,
   },
 ];
-function YourComponent() {
-    const [hoveredImage, setHoveredImage] = useState(null);
-  
-    const handleMouseEnter = (imageName) => {
-      setHoveredImage(imageName);
-    };
-  
-    const handleMouseLeave = () => {
-      setHoveredImage(null);
-    };
-    }
-export default importedImages;
 
-// {
-//     name: 'nextpng',
-//     href: Image1,
-// },
+function Images({ imageNumber }) {
+  // Ensure imageNumber is within the valid range
+  if (imageNumber >= 0 && imageNumber < importedImages.length) {
+    const selectedImage = importedImages[imageNumber];
+    return (
+      
+        <Image
+          priority
+          src={selectedImage.href}
+          alt={selectedImage.name}
+          width={48}
+          height={42}
+        />
+      
+    );
+  } else {
+    return <div>No image found for imageNumber {imageNumber}</div>;
+  }
+}
+
+export default Images;

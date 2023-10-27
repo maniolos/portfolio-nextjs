@@ -19,7 +19,7 @@ const SlidingWords = ({ words }) => {
       });
     };
 
-    const animationDelay = 3000; // Delay in milliseconds before starting the animation
+    const animationDelay = 500; // Delay in milliseconds before starting the animation
     const animationTimer = setTimeout(() => {
       animateWords();
     }, animationDelay);
