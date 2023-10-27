@@ -24,8 +24,6 @@ import {NextUIProvider} from "@nextui-org/react";
 import importedImages from './importer'
 import Images from './importer';
 import Cards from './Cards';
-import {ThemeProvider as NextThemesProvider} from "next-themes";
-import {useTheme} from "next-themes";
 config.autoAddCss = false;
 
 
@@ -44,7 +42,6 @@ export default function Portfolio() {
   return (
     <>
     
-    <NextThemesProvider attribute="class" defaultTheme="dark">
     <Navbar shouldHideOnScroll>
       <NavbarBrand>
         
@@ -217,7 +214,6 @@ export default function Portfolio() {
       <div className="flex flex-wrap h-100 justify-center">
         
       </div>
-      </NextThemesProvider>
       
     </>
   );
