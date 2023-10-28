@@ -10,7 +10,7 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const { email, name, message, phone, subject } = body;
-
+    
     // Send the email to the person who filled out the form
     const personEmailData = await resend.emails.send({
       from: 'Kamil <kamilpawlowski@kamilweb.dev>',
@@ -42,6 +42,7 @@ export async function POST(request) {
     if (personEmailData.id && myEmailData.id) {
       console.log('Emails sent successfully');
       return NextResponse.json({ message: 'Emails sent!' });
+      
     } else {
       console.log('Email sending failed');
       return NextResponse.json({ error: 'Email sending failed' });
