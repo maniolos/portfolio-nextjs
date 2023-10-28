@@ -9,6 +9,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { faHtml5, faSquareJs, faPhp, faCss3Alt, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Button} from "@nextui-org/react";
+import {usePress} from 'react-aria'
+
 import {
   Navbar, 
   NavbarBrand, 
@@ -31,18 +33,51 @@ const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginabl
 const maxSkillLevel = 5;
 
 export default function Portfolio() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   const [animationStarted, setAnimationStarted] = useState(false);
   useEffect(() => {
     setAnimationStarted(true);
     document.title = 'Kamil Pawłowski Portfolio';
   }, []);
+  
+  const menuItems = [
+    {
+      name: "Introduction",
+      href: "#"
+    },
+    {
+      name: "About Me",
+      href: "#AboutMe"
+    },
+    {
+      name: "My Skills",
+      href: "#Skills"
+    },
+    {
+      name: "Technologies",
+      href: "#Technologies"
+    },
+    {
+      name: "My Courses",
+      href: "#Courses"
+    }
 
+  ];
 
 
   return (
     <>
     
-    <Navbar shouldHideOnScroll>
+    <Navbar 
+    isMenuOpen={isMenuOpen}
+    onMenuOpenChange={setIsMenuOpen}
+    >
+    <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+          data-pressed={isMenuOpen}
+        />
       <NavbarBrand>
         
         <p className="font-bold text-inherit">Kamil Pawłowski</p>
@@ -81,6 +116,26 @@ export default function Portfolio() {
           </Button>
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((menuItems, index) => (
+          <NavbarMenuItem key={`${menuItems}-${index}`}>
+            <div>
+              <Link
+                color={
+                  // //"primary" : index === menuItems.name.length - 1 ? "danger" : "foreground"
+                  "foreground"
+                }
+                className="w-full"
+                href={menuItems.href}
+                size="lg"
+              
+              >
+                {menuItems.name}
+              </Link>
+            </div>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
       {/* Introductory Content*/}
       <div className="pt-[18rem] md:pt-[13rem]" id='#'>
