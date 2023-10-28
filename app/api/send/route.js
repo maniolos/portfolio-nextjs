@@ -2,8 +2,8 @@ import { PersonEmailTemplate } from '../../../components/PersonEmailTemplate';
 import { MyEmailTemplate } from '../../../components/MyEmailTemplate';
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-
-const resend = new Resend('re_TwDcKwUp_68nhDuhhXDP7j5jQMDGL8YAz');
+const apiKey = process.env.RESEND_API_KEY;
+const resend = new Resend(apiKey);
 const personalEmailAddress = 'pawlowskidev@gmail.com';
 
 export async function POST(request) {
