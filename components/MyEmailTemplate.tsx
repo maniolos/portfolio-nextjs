@@ -39,7 +39,7 @@ export const MyEmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 
         <Text style={paragraph}>Hello Kamil,</Text>
         <Text style={paragraph}>
-          You have received an email from '{email}' <br/> regarding the subject:<br/> {subject}
+          You have received an email from &apos;{email}&apos; <br/> regarding the subject:<br/> {subject}
         </Text>
         <Text style={paragraph}>
           Message: <br/>{message}

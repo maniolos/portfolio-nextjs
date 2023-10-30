@@ -31,15 +31,15 @@ export const PersonEmailTemplate: React.FC<Readonly<PersonEmailTemplateProps>> =
           I trust this message finds you well.
           </Text>
           <Text style={paragraph}>
-          I'm absolutely delighted that you've taken the time to reach out to me through my personal portfolio.<br/>
+          I&apos;m absolutely delighted that you&apos;ve taken the time to reach out to me through my personal portfolio.<br/>
           
           </Text>
           <Text style={paragraph}>
           
-          Your interest is greatly appreciated, and I'm excited to connect with you.
+          Your interest is greatly appreciated, and I&apos;m excited to connect with you.
           </Text>
           <Text style={paragraph}>
-          Please feel free to share your questions, ideas, or any specific topics you'd like to explore. Your input is valuable to me, and I'm here to help.
+          Please feel free to share your questions, ideas, or any specific topics you&apos;d like to explore. Your input is valuable to me, and I&apos;m here to help.
 
           </Text>
 
