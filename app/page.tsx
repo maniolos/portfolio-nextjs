@@ -72,6 +72,8 @@ export default function Portfolio() {
     <Navbar 
     isMenuOpen={isMenuOpen}
     onMenuOpenChange={setIsMenuOpen}
+    isBlurred={true}
+    className='dark:bg-stone-900 opacity-70'
     >
     <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -111,7 +113,7 @@ export default function Portfolio() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="/contact" variant="light">
+          <Button as={Link} color="primary" href="/contact" variant="ghost">
             Contact
           </Button>
         </NavbarItem>
@@ -163,7 +165,8 @@ export default function Portfolio() {
         <div className='sm:flex-nowrap sm:flex'>
           <h1 className='pt-10 sm:pl-[1rem] md:pl-[5rem] lg:pl-[20%] pl-1 sm:pr-[3rem] sm:w-[72rem] pd-[3rem] sm:leading-10  text-center sm:text-left text-lg sm:text-2xl antialiased tracking-wide not-italic  '>I&apos;m Kamil Pawłowski, a junior <span className='underline'>Front-end</span> developer with a flair for creative coding. My journey into web development began with a fascination for turning ideas into reality through code. Proficient in design and UI optimization, I&apos;m committed to becoming a Full-Stack Engineer, blending design with functionality. Join me in shaping the dynamic web landscape.</h1>
           <Image 
-            as={NextImage}
+
+            isBlurred={true}
             className=' mt-[2rem] sm:mt-0 sm:ml-0 sm:h-[25rem]  sm:w-[24rem] hidden lg:block'
             src="/img/maniek3.jpg"
             width={500}
@@ -228,8 +231,9 @@ export default function Portfolio() {
       <div className=' bg-grey pt-[7rem] sm:mt-[10rem] text-center  ' id='Courses'>
         <span className="pb-2  font-mono text-xl sm:text-4xl  px-2 bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:100%_2px] sm:bg-[length:100%_3px] bg-no-repeat bg-bottom">My courses on CodeCademy</span>
       </div>
-        <div className='flex justify-center pt-[3rem]'>
-          <div className='  w-[5rem]  h-[5rem]   hidden sm:flex'>
+      <div className=''>
+        <div className='flex justify-center pt-[3rem] '>
+          <div className='  w-[5rem]  h-[5rem]   hidden sm:flex '>
             <FontAwesomeIcon 
             icon={faCode} 
             size="3x"
@@ -250,6 +254,7 @@ export default function Portfolio() {
             </div>
           
         </div>
+      </div>
       
 
 

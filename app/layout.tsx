@@ -17,8 +17,8 @@ export default function RootLayout({
   
 }) {
   return (
-    <html lang="en" className='dark'>
-      <body className={`${inter.className} dark text-slate-100 `}> 
+    <html lang="en" className='dark bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-black via-stone-800 to-stone-900'>
+      <body className={`${inter.className} `}> 
         <Providers>
           {children}
         </Providers>

@@ -79,13 +79,16 @@ export default function Contact() {
   };
   return (
     <NextUIProvider>
-      <Navbar position="static">
+      <Navbar 
+      position="static"
+      className='dark:bg-stone-900 opacity-70'
+      >
         <NavbarBrand>
           <p className="font-bold text-inherit">Kamil Pawłowski</p>
         </NavbarBrand>
         <NavbarContent justify="end">
           <NavbarItem>
-            <Button as={Link} color="primary" href="/" variant="light">
+            <Button as={Link} color="primary" href="/" variant="ghost">
               Go back
             </Button>
           </NavbarItem>
@@ -146,7 +149,7 @@ export default function Contact() {
             className="max-w-md"
             onValueChange={setdescriptionValue}
           />
-          <div className='flex justify-center mt-3'>
+          <div className='flex justify-center mt-3 mb-5'>
             <Button
               // color={isLoading ? "secondary" : isFormValid ? "success" : isButtonColorWarning ? "warning" : "danger"}
               color={isLoading ? "warning" : isSubmitted ? "secondary" : isFormValid ? "success" : "danger"}
@@ -160,6 +163,7 @@ export default function Contact() {
           </div>
         </form>
       </div>
+      <div className=' h-[7.2rem] sm:h-[9.3rem]'></div>
     </NextUIProvider>
   );
 }

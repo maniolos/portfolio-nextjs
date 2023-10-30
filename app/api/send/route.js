@@ -1,5 +1,9 @@
-import { PersonEmailTemplate } from '../../../components/PersonEmailTemplate';
-import { MyEmailTemplate } from '../../../components/MyEmailTemplate';
+import dynamic from 'next/dynamic';
+
+import { PersonEmailTemplate } from '../../../components/PersonEmailTemplate'
+
+
+import { MyEmailTemplate } from '../../../components/MyEmailTemplate'
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 const apiKey = process.env.RESEND_API_KEY;
@@ -16,13 +20,7 @@ export async function POST(request) {
       from: 'Kamil <kamilpawlowski@kamilweb.dev>',
       to: email,
       subject: 'Confirmation: Your Message Has Been Received',
-      react: PersonEmailTemplate({
-        firstName: name,
-        email,
-        phone,
-        subject,
-        message,
-      }),
+      react: PersonEmailTemplate({ firstName: name }),
     });
 
     // Send the notification email to your personal email address

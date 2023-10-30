@@ -43,7 +43,10 @@ function Cards({ CardNumber }) {
   if (CardNumber >= 0 && CardNumber < importedImages.length) {
     const selectedImage = importedImages[CardNumber];
     return (
-        <Card className="max-w-[300px] h-[250px] bg-stone-900 rounded-lg pb-2 p-1 m-2">
+        <Card 
+        className="max-w-[300px] h-[250px] bg-stone-900 rounded-lg pb-2 p-1 m-2"
+        
+        >
             <CardHeader className="flex gap-3 pl-4">
             <Image
             as={NextImage}

@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/71473477/how-to-make-background-image-using-tailwind-css-with-some-customization
