@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, Button, Input, Textarea } from '@nextui-org/react';
 import { NextUIProvider } from '@nextui-org/react';
-
+import { faInstagram, faGithub, faLinkedin  } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Contact() {
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
@@ -86,6 +87,7 @@ export default function Contact() {
         <NavbarBrand>
           <p className="font-bold text-inherit">Kamil Pawłowski</p>
         </NavbarBrand>
+        
         <NavbarContent justify="end">
           <NavbarItem>
             <Button as={Link} color="primary" href="/" variant="ghost">
@@ -163,7 +165,7 @@ export default function Contact() {
           </div>
         </form>
       </div>
-      <div className=' h-[7.2rem] sm:h-[9.3rem]'></div>
+      
     </NextUIProvider>
   );
 }

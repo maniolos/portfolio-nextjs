@@ -6,7 +6,7 @@ import {Providers} from "./providers";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Kamil Pawłowski Portfolio',
+  title: 'Kamil Pawłowski | Portfolio',
   description: 'Front-End Developer',
 }
 
@@ -17,11 +17,13 @@ export default function RootLayout({
   
 }) {
   return (
-    <html lang="en" className='dark bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-black via-stone-800 to-stone-900'>
-      <body className={`${inter.className} `}> 
-        <Providers>
+    <html lang="en" className='dark '>
+      <body className={`${inter.className}`}> 
+        <div className='bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-black via-stone-800 to-stone-900 min-h-screen'>
+          <Providers>
           {children}
-        </Providers>
+          </Providers>
+        </div>
         <Analytics />
       </body>
     </html>
