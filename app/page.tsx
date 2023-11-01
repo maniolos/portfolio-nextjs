@@ -27,7 +27,7 @@ import importedImages from './importer'
 import Images from './importer';
 import Cards from './Cards';
 config.autoAddCss = false;
-
+import {Reveal} from './motion';
 
 const words = ['I', 'strive', 'to', 'create', 'the', 'best', 'UI/UX', 'imaginable'];
 const maxSkillLevel = 5;
@@ -161,14 +161,22 @@ export default function Portfolio() {
       <div className=" p-4 h-[33rem] sm:h-[40rem] font-mono text-2xl justify-center text-center" >
         <div className="flex items-center justify-center ">
           <div className="flex flex-col items-center justify-center ">
-            <span className="justify-center font-mono text-2xl sm:text-3xl flex-nowrap flex px-2">
-              About me
+            <Reveal>
+              <div>
+              <span className="justify-center font-mono text-2xl sm:text-3xl flex-nowrap flex px-2">
+                About me
               </span>
+            
               <Divider className="bg-gradient-to-r from-blue-500 to-cyan-500  " />
+              </div>
+            </Reveal>
           </div>
         </div>
         <div className='sm:flex-nowrap sm:flex'>
+          <Reveal>
           <h1 className='pt-10 sm:pl-[1rem] md:pl-[5rem] lg:pl-[20%] pl-1 sm:pr-[3rem] sm:w-[72rem] pd-[3rem] sm:leading-10  text-center sm:text-left text-xl sm:text-2xl antialiased tracking-wide'>I&apos;m Kamil Pawłowski, a junior <span className='underline'>Front-end</span> developer with a flair for creative coding. My journey into web development began with a fascination for turning ideas into reality through code. Proficient in design and UI optimization, I&apos;m committed to becoming a Full-Stack Engineer, blending design with functionality. Join me in shaping the dynamic web landscape.</h1>
+          </Reveal> 
+          <Reveal>
           <Image 
 
             isBlurred={true}
@@ -178,86 +186,131 @@ export default function Portfolio() {
             height={500}
             alt='My photo'
           />
+          </Reveal>
         </div>
+      </div>
+      <div className='flex justify-center items-center'>
+        
       </div>
       {/* Skills */}
       <div id='Skills' className='pt-[7rem]'>
+      
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center">
+              <Reveal>
+                <div>
             <span className="pb-2 justify-center font-mono text-2xl sm:text-4xl flex px-2 ">
               My Skills
               
               </span>
+              
               <Divider className="bg-gradient-to-r from-blue-500 to-cyan-500  " />
+              </div>
+              </Reveal>
             </div>
         </div>
         
         
         <div className="h-[30rem] flex pl-2">
+        
           <div className='sm:ml-[21%] ml-[3rem] mr-5 w-[5rem] h-[100%] py-[1rem] flex flex-col items-end justify-evenly '>
+            <Reveal>
             <FontAwesomeIcon className=''
               icon={faHtml5} 
               size="6x"
             />
+            </Reveal>
+            <Reveal>
             <FontAwesomeIcon className=''
               icon={faCss3Alt} 
               size="6x"
             />
+            </Reveal>
+            <Reveal>
             <FontAwesomeIcon className=''
               icon={faSquareJs} 
               size="6x"
             />
+            </Reveal>
+            <Reveal>
             <FontAwesomeIcon className=''
               icon={faPhp} 
               size="6x"
             />
+            </Reveal>
           </div>
+          
           <div className=' container w-[52%]  mt-8 flex flex-col space-y-4'>
+            <Reveal>
             <SkillLevel category="Html" level={3}/>
+            </Reveal>
+            <Reveal>
             <SkillLevel category="Css" level={3}/>
+            </Reveal>
+            <Reveal>
             <SkillLevel category="Java script" level={2}/>
+            </Reveal>
+            <Reveal>
             <SkillLevel category="PHP" level={1}/>
+            </Reveal>
+
           </div>
+          
         </div>
+        
       </div>
+      
 
       <div id='Technologies' className='pt-[7rem]'>
         <div className="flex flex-nowrap justify-center text-center mt-[5rem] h-[2rem] sm:h-[3rem] mb-[4rem]">
+        <Reveal>
         <span className='font-mono text-lg sm:text-4xl px-4 '>
         Technologies used for this project
         <Divider className='bg-gradient-to-r from-blue-500 to-cyan-500 bg-[length:100%_2px] sm:bg-[length:100%_3px] bg-no-repeat bg-bottom'/>
+        
         </span>
+        </Reveal>
         </div>
       </div>
       {/*Cards New*/}
       <div className='flex justify-center items-center'>
         <div className='h-auto grid items-center justify-center grid-cols-1 md:grid-cols-4'>
+        <Reveal>
           <Cards CardNumber={0}/>
+          </Reveal><Reveal>     
           <Cards CardNumber={1}/>
+          </Reveal><Reveal>
           <Cards CardNumber={2}/>
+          </Reveal><Reveal>
           <Cards CardNumber={3}/>
+          </Reveal>
 
         </div>
       </div>
       {/* Courses */}
       <div className=' bg-grey pt-[7rem] sm:mt-[10rem] text-center  ' id='Courses'>
         <div className='flex justify-center items-center '>
+        <Reveal>
         <span className="pb-2  font-mono text-2xl sm:text-4xl  px-2 ">
           My courses on CodeCademy
           <Divider className='bg-gradient-to-r from-blue-500 to-cyan-500'/>
           </span>
+          </Reveal>
         </div>
       </div>
       <div className=''>
         <div className='flex justify-center sm:pt-[3rem] '>
           <div className='  w-[5rem]  h-[5rem]   hidden sm:flex '>
+            <Reveal>
             <FontAwesomeIcon 
             icon={faCode} 
             size="3x"
-            />       
+            /></Reveal>       
             </div>
             <div className=' font-mono w-[25rem] h-[15rem] flex text-center flex-col'>
-              <h1 className='text-2xl flex flex-col'>Currently im working on completing a react course</h1>
+
+            <Reveal><h1 className='text-2xl flex flex-col'>Currently im working on completing a react course</h1></Reveal>
+            <Reveal>
               <Link
               className='pt-4 pl-8   text-xl text-center flex flex-nowrap text-blue-500' 
               href="https://www.codecademy.com/profiles/maniolos3" 
@@ -267,10 +320,15 @@ export default function Portfolio() {
               Visit my Codecademy profile 
               
             </Link>
+            </Reveal>
+            <Reveal>
             <Divider className='mt-5'/>
+            </Reveal>
             <div className='flex pl-4 pt-5'>
               
-            <h1 className='text-xl font-mono flex-nowrap truncate pl-2 sm:pl-0'>I practice CSS on</h1>
+            <Reveal><h1 className='text-xl font-mono flex-nowrap truncate pl-2 sm:pl-0'>I practice CSS on</h1>
+            </Reveal>
+            <Reveal>
             <Link
               className=' pl-2 text-xl text-center flex flex-nowrap text-blue-500' 
               href="https://cssbattle.dev/player/kamilpawlowski" 
@@ -280,6 +338,7 @@ export default function Portfolio() {
               CssBattles
               
             </Link>
+            </Reveal>
             </div>
 
             </div>
