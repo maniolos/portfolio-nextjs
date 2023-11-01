@@ -262,7 +262,7 @@ export default function Portfolio() {
       
 
       <div id='Technologies' className='pt-[7rem]'>
-        <div className="flex flex-nowrap justify-center text-center mt-[5rem] h-[2rem] sm:h-[3rem] mb-[4rem]">
+        <div className="flex flex-nowrap justify-center text-center mt-[5rem] h-[2rem] sm:h-[3rem] sm:mb-[4rem] mb-[1rem]">
         <Reveal>
         <span className='font-mono text-lg sm:text-4xl px-4 '>
         Technologies used for this project
