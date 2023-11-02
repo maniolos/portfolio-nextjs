@@ -41,6 +41,8 @@ export default function Portfolio() {
     document.title = 'Kamil Pawłowski Portfolio';
   }, []);
   
+
+
   const menuItems = [
     {
       name: "Introduction",
@@ -65,12 +67,16 @@ export default function Portfolio() {
 
   ];
 
-
+  const togleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen);
+    
+    };
   return (
     <>
     
     <Navbar 
-    isMenuOpen={isMenuOpen}
+    isMenuOpen={isMenuOpen} 
     onMenuOpenChange={setIsMenuOpen}
     isBlurred={true}
     className='dark:bg-stone-900 opacity-70'
@@ -79,6 +85,8 @@ export default function Portfolio() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
           data-pressed={isMenuOpen}
+          // onClick={() => togleMenu()}
+          // data-pressed={isMenuOpen}
         />
       <NavbarBrand>
         
@@ -90,23 +98,24 @@ export default function Portfolio() {
             Introduction
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link href="#AboutMe" color='foreground'>
+        <NavbarItem >
+          <Link href="#AboutMe" color='foreground' >
             About Me
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#Skills">
+          <Link color="foreground" href="#Skills" >
             My Skills
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#Technologies">
+          <Link color="foreground" href="#Technologies" >
             Technologies
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#Courses">
+          <Link color="foreground" href="#Courses" 
+          >
             My Courses
           </Link>
         </NavbarItem>
@@ -130,7 +139,9 @@ export default function Portfolio() {
                 className="w-full"
                 href={menuItems.href}
                 size="lg"
-              
+                onPress={() => togleMenu()}
+          
+                
               >
                 {menuItems.name}
               </Link>

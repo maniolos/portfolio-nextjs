@@ -107,7 +107,7 @@ export default function Contact() {
             type="text"
             label="Name"
             variant="bordered"
-            className="max-w-xs mb-4"
+            className="max-w-md mb-4"
             onValueChange={setNameValue}
           />
           <Input
@@ -119,7 +119,7 @@ export default function Contact() {
             isInvalid={isEmailInvalid}
             color={isEmailInvalid ? "danger" : "default"}
             errorMessage={isEmailInvalid && "Please enter a valid email"}
-            className="max-w-xs mb-4"
+            className="max-w-md mb-4"
             onValueChange={setEmailValue}
           />
           <Input
@@ -148,7 +148,7 @@ export default function Contact() {
             label="Description"
             variant="bordered"
             placeholder="Enter your description"
-            className="max-w-md"
+            className="max-w-md sm:w-[28rem]"
             onValueChange={setdescriptionValue}
           />
           <div className='flex justify-center mt-3 mb-5'>
